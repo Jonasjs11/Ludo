@@ -1,4 +1,9 @@
 class Stjernefelt extends Felt{
+  Stjernefelt(int posX, int posY, int size, int farve){
+    super(posX, posY, size, farve);
+  }
+  
+  
   void display(){
     
   }

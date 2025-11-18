@@ -1,8 +1,16 @@
 class Spiller{
-  
- Brik[] brikker;
+  Brik[] brikker;
 
- void vælgBrik(){
-   
- }
+
+  Spiller(int farve){
+    brikker = new Brik[4];
+    for(int i = 0; i < brikker.length; i++){
+      brikker[i] = new Brik(farve);
+    }
+  }
+
+
+  void vælgBrik(){
+    
+  }
 }

@@ -2,6 +2,12 @@ class Brik{
   int posX, posY;
   int farve;
   
+  
+  Brik(int farve){
+    this.farve = farve;
+  }
+  
+  
   void display(){
     
   }
