@@ -10,7 +10,7 @@ class Brik{
     
   }
   
-  boolean musErPaa(){
+  boolean musErPå(){
     return false;
   }
 }
