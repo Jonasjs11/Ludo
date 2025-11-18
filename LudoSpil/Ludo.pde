@@ -1,7 +1,7 @@
-class ludo{
+class Ludo{
   Felt[] felter;
  
-  spiller[] spillere;
+  Spiller[] spillere;
  
   Terning terning;
 

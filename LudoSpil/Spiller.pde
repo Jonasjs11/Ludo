@@ -1,4 +1,4 @@
-class spiller{
+class Spiller{
   
  Brik[] brikker;
 

@@ -17,6 +17,6 @@ class Felt{
   }
   
   Felt findNæsteFelt(Spiller spiller){
-    
+    return null;
   }
 }
