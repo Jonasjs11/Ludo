@@ -1,7 +1,7 @@
 Ludo ludo;
 
 void setup(){
-  size(500, 500);
+  size(1000, 1000);
   
   ludo = new Ludo();
 }
