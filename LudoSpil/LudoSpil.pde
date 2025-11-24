@@ -12,6 +12,23 @@ void draw(){
   ludo.display();
 }
 
+void fillSpillerFarve(int farve){
+  switch(farve){
+      case 0:
+        fill(255, 255, 0);
+        break;
+      case 1:
+        fill(0, 255, 0);
+        break;
+      case 2:
+        fill(0, 0, 255);
+        break;
+      case 3:
+        fill(255, 0, 0);
+        break;
+    }
+}
+
 void star(float centerX, float centerY, float starRadius){
   PShape s = createShape();
   s.beginShape();
