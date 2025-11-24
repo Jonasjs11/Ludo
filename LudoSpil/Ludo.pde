@@ -78,9 +78,10 @@ class Ludo{
     felter[felter.length-1] = new Slutfelt(feltSize*5, feltSize*5, feltSize, -1);
     
     spillere = new Spiller[4];
-    for(int s = 0; s < spillere.length; s++){
-      spillere[s] = new Spiller(s);
-    }
+    spillere[0] = new Spiller(1, new Hjem(0, 0, feltSize*4, 1));
+    spillere[1] = new Spiller(2, new Hjem(0, 7*feltSize, feltSize*4, 2));
+    spillere[2] = new Spiller(3, new Hjem(7*feltSize, 0, feltSize*4, 3));
+    spillere[3] = new Spiller(4, new Hjem(7*feltSize, 7*feltSize, feltSize*4, 4));
     
     terning = new Terning(6);
     
@@ -91,6 +92,10 @@ class Ludo{
   void display(){
     for(int i = 0; i < felter.length; i++){
       felter[i].display();
+    }
+    
+    for(int i = 0; i < spillere.length; i++){
+      spillere[i].display();
     }
   }
   
