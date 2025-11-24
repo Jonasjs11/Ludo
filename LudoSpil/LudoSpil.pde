@@ -7,5 +7,7 @@ void setup(){
 }
 
 void draw(){
+  background(50);
+  
   ludo.display();
 }

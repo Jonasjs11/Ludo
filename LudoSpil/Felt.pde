@@ -15,8 +15,27 @@ class Felt{
   
   
   void display(){
-    fill(64 + farve*64, 0, 0);
+    noStroke();
+    fill(150);
     rect(posX, posY, size, size);
+    switch(farve){
+      case -1:
+        fill(230);
+        break;
+      case 0:
+        fill(255, 255, 0);
+        break;
+      case 1:
+        fill(0, 255, 0);
+        break;
+      case 2:
+        fill(0, 0, 255);
+        break;
+      case 3:
+        fill(255, 0, 0);
+        break;
+    }
+    rect(posX+(size/30), posY+(size/30), 28*size/30, 28*size/30);
   }
   
   void landSpiller(Spiller spiller){
