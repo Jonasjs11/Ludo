@@ -5,8 +5,7 @@ class Globusfelt extends Felt{
   
   
   void display(){
-    fill(64 + farve*64, 0, 0);
-    rect(posX, posY, size, size);
+    super.display();
   }
   
   void landSpiller(Spiller spiller){
