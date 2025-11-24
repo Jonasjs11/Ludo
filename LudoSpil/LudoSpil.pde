@@ -1,7 +1,7 @@
 Ludo ludo;
 
 void setup(){
-  size(1000, 1000);
+  size(990, 990);
   
   ludo = new Ludo();
 }
@@ -15,7 +15,7 @@ void draw(){
 void star(float centerX, float centerY, float starRadius){
   PShape s = createShape();
   s.beginShape();
-  s.fill(255);
+  s.noFill();
   s.stroke(0);
   s.strokeWeight(2);
   int kanter = 5;
