@@ -6,7 +6,7 @@ class Spiller{
   Spiller(int farve, Hjem hjem){
     brikker = new Brik[4];
     for(int i = 0; i < brikker.length; i++){
-      brikker[i] = new Brik(hjem.posX, hjem.posY, 50, farve);
+      brikker[i] = new Brik(hjem.posX, hjem.posY, 40, farve);
     }
     this.hjem = hjem;
   }
