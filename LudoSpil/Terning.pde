@@ -5,11 +5,11 @@ class Terning{
   
   Terning(int antalSider){
     this.antalSider = antalSider;
-    kast();
+    side = -1;
   }
   
   
-  void display(int x, int y, int w){
+  void display(int x, int y, int w, float rot){
     int dotDiameter = w/5;
     
     fill(255);
@@ -21,6 +21,17 @@ class Terning{
     fill(0);
     
     switch(side){
+      case -1:
+        fill(0);
+        noStroke();
+        textAlign(CENTER, CENTER);
+        textSize(w/3);
+        pushMatrix();
+        translate(x + w/2, y + w/2);
+        rotate(rot);
+        text("KAST", 0, 0);
+        popMatrix();
+        break;
       case 1:
         circle(x + w/2, y + w/2, dotDiameter);
         break;
@@ -39,7 +50,7 @@ class Terning{
         circle(x + 2*w/3, y + 2*w/3, dotDiameter);
         break;
       case 5:
-        globe(x + w/2, x + w/2, w * 0.75);
+        globe(x + w/2, y + w/2, w * 0.75);
         break;
       case 6:
         circle(x + 2*w/6, y + w/2 - dotDiameter * 1.5, dotDiameter);
@@ -50,6 +61,14 @@ class Terning{
         circle(x + 4*w/6, y + w/2 + dotDiameter * 1.5, dotDiameter);
         break;
     }
+  }
+  
+  boolean erBlank(){
+    return side == -1;
+  }
+  
+  void reset(){
+    side = -1;
   }
   
   void kast(){

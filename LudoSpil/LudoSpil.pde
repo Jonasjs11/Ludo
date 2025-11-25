@@ -4,29 +4,45 @@ void setup(){
   size(990, 990);
   
   ludo = new Ludo();
+  
+  keyReleased = false;
+  mouseReleased = false;
 }
 
 void draw(){
   background(50);
   
   ludo.display();
+  ludo.checkForInput();
+  
+  keyReleased = false;
+  mouseReleased = false;
 }
 
 void fillSpillerFarve(int farve){
   switch(farve){
-      case 0:
+      case 1:
         fill(255, 255, 0);
         break;
-      case 1:
+      case 2:
         fill(0, 255, 0);
         break;
-      case 2:
+      case 3:
         fill(0, 0, 255);
         break;
-      case 3:
+      case 4:
         fill(255, 0, 0);
         break;
     }
+}
+
+boolean keyReleased;
+void keyReleased(){
+  keyReleased = true;
+}
+boolean mouseReleased;
+void mouseReleased(){
+  mouseReleased = true;
 }
 
 void star(float centerX, float centerY, float starRadius){

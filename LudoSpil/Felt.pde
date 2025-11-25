@@ -1,8 +1,9 @@
 class Felt{
+  int index;
   int posX, posY;
   int size;
   int farve;
-  ArrayList<Spiller> spillere;
+  ArrayList<Brik> brikker;
   Felt defaultNæste, sammeFarveNæste;
   
   
@@ -11,31 +12,32 @@ class Felt{
     this.posY = posY;
     this.size = size;
     this.farve = farve;
+    brikker = new ArrayList<Brik>();
   }
-  
+  Felt sætIndex(int i){
+    index = i;
+    return this;
+  }
   
   void display(){
     noStroke();
     fill(150);
     rect(posX, posY, size, size);
-    switch(farve){
-      case -1:
-        fill(230);
-        break;
-      case 0:
-        fill(255, 255, 0);
-        break;
-      case 1:
-        fill(0, 255, 0);
-        break;
-      case 2:
-        fill(0, 0, 255);
-        break;
-      case 3:
-        fill(255, 0, 0);
-        break;
-    }
+    fill(230);
+    fillSpillerFarve(farve+1);
     rect(posX+(size/30), posY+(size/30), 28*size/30, 28*size/30);
+    
+    fill(0);
+    textAlign(LEFT, TOP);
+    textSize(10);
+    text(index, posX, posY);
+  }
+  
+  int centerX(){
+    return posX + size/2;
+  }
+  int centerY(){
+    return posY + size/2;
   }
   
   void landSpiller(Spiller spiller){
