@@ -23,6 +23,8 @@ class Spiller{
     ArrayList<Flyt> muligeFlyts = new ArrayList<Flyt>();
     
     for(int i = 0; i < brikker.length; i++){
+      if(brikker[i].erFærdig){ continue; }
+      
       if(brikker[i].erHjemme){
         if(terningSide == 6){
           //Brikken kan flyttes ud fra hjem

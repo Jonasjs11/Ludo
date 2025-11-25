@@ -83,8 +83,9 @@ class Ludo{
     boolean skalVæreUdenfor = næsteFelt <= 9+(3*10);
     
     for(int i = 0; i < antalFelter; i++){
-      if(næsteFelt == 8+(farve*10)){
+      if(erVedStartenAfSlutVejen(næsteFelt, farve)){
         næsteFelt = 40+(farve*4)+0;
+        skalVæreUdenfor = false;
         println("Kan flyttes ind på holdets linje");
         continue;
       }
@@ -93,12 +94,44 @@ class Ludo{
       if(næsteFelt > 9+(3*10) && skalVæreUdenfor){
         næsteFelt = 0; // Den er i ringen og skal fortsat være det, gå til starten af ringen.
         println("Kan flyttes til start af ring");
-      } else if (næsteFelt == 40+(farve*4)+3){
+      } else if (erForbiSlutningenAfSlutVejen(næsteFelt, farve)){
         næsteFelt = felter.length-1; // Den er nået til slutfeltet.
         println("Kan flyttes til slut");
+        break;
       }
     }
     return felter[næsteFelt];
+  }
+  
+  boolean erVedStartenAfSlutVejen(int index, int farve){
+    if(farve == 0 && index == 38){//GUL
+      return true;
+    }
+    if(farve == 1 && index == 8){//GRØN
+      return true;
+    }
+    if(farve == 2 && index == 18){//BLÅ
+      return true;
+    }
+    if(farve == 3 && index == 28){//RØD
+      return true;
+    }
+    return false;
+  }
+  boolean erForbiSlutningenAfSlutVejen(int index, int farve){
+    if(farve == 0 && index == 44){
+      return true;
+    }
+    if(farve == 1 && index == 48){
+      return true;
+    }
+    if(farve == 2 && index == 52){
+      return true;
+    }
+    if(farve == 3 && index == 56){
+      return true;
+    }
+    return false;
   }
   
   Felt findStartFelt(int farve){

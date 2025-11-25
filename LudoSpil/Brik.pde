@@ -4,6 +4,7 @@ class Brik{
   int farve;
   int size;
   boolean erHjemme;
+  boolean erFærdig;
   
   Brik(int posX, int posY, int size, int farve){
     felt = null;
@@ -26,7 +27,12 @@ class Brik{
   void flytTil(Felt nytFelt){
     if(nytFelt == null){
       println("Flyt Hjem");
+      erHjemme = true;
       return;
+    }
+    if(nytFelt.getClass() == new Slutfelt(0, 0, 0, 0).getClass()){
+      println("NÅET SLUT");
+      erFærdig = true;
     }
     erHjemme = false;
     felt = nytFelt;
