@@ -41,6 +41,10 @@ class Brik{
     felt.landBrik(this);
   }
   
+  void sendHjem(){
+    
+  }
+  
   boolean musErPå(){
     return false;
   }

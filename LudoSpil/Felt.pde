@@ -41,7 +41,19 @@ class Felt{
   }
   
   void landBrik(Brik brik){
-    
+    if (brikker.size()>0){
+      if (brikker.get(0).farve == brik.farve){
+        brikker.add(brik);
+      }else{
+        for (int i=0; i < brikker.size();i++){
+          brikker.get(i).sendHjem();
+        }
+        brikker.clear();
+        brikker.add(brik);
+      }
+    } else{
+      brikker.add(brik);
+    }
   }
   
   void fjernBrik(Brik brik){
