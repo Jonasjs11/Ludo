@@ -40,12 +40,12 @@ class Felt{
     return posY + size/2;
   }
   
-  void landSpiller(Spiller spiller){
+  void landBrik(Brik brik){
     
   }
   
-  void fjernSpiller(Spiller spiller){
-    
+  void fjernBrik(Brik brik){
+    brikker.remove(brik);
   }
   
   Felt findNæsteFelt(Spiller spiller){

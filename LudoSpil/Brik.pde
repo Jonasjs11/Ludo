@@ -38,7 +38,7 @@ class Brik{
     felt = nytFelt;
     posX = felt.centerX();
     posY = felt.centerY();
-    felt.brikker.add(this);
+    felt.landBrik(this);
   }
   
   boolean musErPå(){
