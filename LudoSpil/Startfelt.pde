@@ -7,12 +7,4 @@ class Startfelt extends Felt{
   void display(){
     super.display();
   }
-  
-  void landSpiller(Spiller spiller){
-    
-  }
-  
-  void fjernSpiller(Spiller spiller){
-    
-  }
 }

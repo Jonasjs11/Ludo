@@ -9,12 +9,4 @@ class Globusfelt extends Felt{
     
     globe(posX + size/2, posY + size/2, size * 0.75);
   }
-  
-  void landSpiller(Spiller spiller){
-    
-  }
-  
-  void fjernSpiller(Spiller spiller){
-    
-  }
 }

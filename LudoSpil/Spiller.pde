@@ -57,8 +57,4 @@ class Spiller{
       brikker[i].display();
     }
   }
-
-  void vælgBrik(){
-    
-  }
 }

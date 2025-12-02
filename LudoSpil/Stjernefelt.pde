@@ -9,12 +9,4 @@ class Stjernefelt extends Felt{
 
     star(posX + size/2, posY + size/2, size*0.4);
   }
-  
-  void landSpiller(Spiller spiller){
-    
-  }
-  
-  void fjernSpiller(Spiller spiller){
-    
-  }
 }

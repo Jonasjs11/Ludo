@@ -55,8 +55,4 @@ class Brik{
     posY = posYStart;
     erHjemme = true;
   }
-  
-  boolean musErPå(){
-    return false;
-  }
 }

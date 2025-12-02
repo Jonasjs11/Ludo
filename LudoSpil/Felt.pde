@@ -4,8 +4,6 @@ class Felt{
   int size;
   int farve;
   ArrayList<Brik> brikker;
-  Felt defaultNæste, sammeFarveNæste;
-  
   
   Felt(int posX, int posY, int size, int farve){
     this.posX = posX;
@@ -58,9 +56,5 @@ class Felt{
   
   void fjernBrik(Brik brik){
     brikker.remove(brik);
-  }
-  
-  Felt findNæsteFelt(Spiller spiller){
-    return null;
   }
 }
