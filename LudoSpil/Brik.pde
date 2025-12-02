@@ -36,12 +36,14 @@ class Brik{
     if(nytFelt.getClass() == new Slutfelt(0, 0, 0, 0).getClass()){
       println("NÅET SLUT");
       erFærdig = true;
+      felt.fjernBrik(this);
       felt = nytFelt;
       posX = felt.centerX();
       posY = felt.centerY();
       return;
     }
     erHjemme = false;
+    felt.fjernBrik(this);
     felt = nytFelt;
     posX = felt.centerX();
     posY = felt.centerY();
