@@ -1,6 +1,7 @@
 class Brik{
   Felt felt;
   int posX, posY;
+  int posXStart, posYStart;
   int farve;
   int size;
   boolean erHjemme;
@@ -10,6 +11,8 @@ class Brik{
     felt = null;
     this.posX = posX;
     this.posY = posY;
+    posXStart = posX;
+    posYStart = posY;
     this.size = size;
     this.farve = farve;
     erHjemme = true;
@@ -33,6 +36,10 @@ class Brik{
     if(nytFelt.getClass() == new Slutfelt(0, 0, 0, 0).getClass()){
       println("NÅET SLUT");
       erFærdig = true;
+      felt = nytFelt;
+      posX = felt.centerX();
+      posY = felt.centerY();
+      return;
     }
     erHjemme = false;
     felt = nytFelt;
@@ -42,7 +49,9 @@ class Brik{
   }
   
   void sendHjem(){
-    
+    posX = posXStart;
+    posY = posYStart;
+    erHjemme = true;
   }
   
   boolean musErPå(){
